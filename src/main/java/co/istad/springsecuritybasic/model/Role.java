@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -17,4 +19,7 @@ public class Role {
     @Column(unique = true)
     private String name;
     private String description;
+    @ManyToMany
+    Set<Authority> authorities;
+
 }

@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -17,4 +19,6 @@ public class User {
     @Column(unique = true)
     String email;
     String password;
+    @ManyToMany
+    Set<Role> roles;
 }
