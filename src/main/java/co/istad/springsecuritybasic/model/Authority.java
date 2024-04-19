@@ -15,4 +15,5 @@ public class Authority {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     private String name;
+    g
 }
